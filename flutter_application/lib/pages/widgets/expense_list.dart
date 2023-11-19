@@ -17,12 +17,11 @@ class _ExpenseListState extends State<ExpenseList> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 150,
-            //child: Text("Grafik"),
-          ),
-          Expanded(
+          SizedBox(
+            height: 300,
             child: ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
               itemCount: expenses.length,
               itemBuilder: (context, index) {
                 return ExpenseItem(expenses[index]);
